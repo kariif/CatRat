@@ -26,6 +26,7 @@ class cr_Server(commands.Cog):
             field1_value = (
                 f'**;admin** - aktualny zespół administracji, moderatorów oraz własciciele serwera\n'
                 f'**;userinfo [użytkownik]** - sprawdź informacje o sobie (bez parametru) lub użytkowniku (z parametrem)\n'
+                f'**;serverinfo** - sprawdź informacje oraz statystyki dotyczące serwera'
             )
             field3_name = f'Pozostałe:'
             field3_value = (
@@ -115,4 +116,22 @@ class cr_Server(commands.Cog):
             return await channel.send(embed=embed)
         except Exception as e:
             await cr_Exception(self.client, self.channel_id, str(e))
+
+    @commands.command()
+    async def serverinfo(self, ctx):
+        try:
+            channel = self.client.get_channel(self.channel_id)
+            date_format = "%a, %d %b %Y %I:%M %p"
+            guild = ctx.guild
+            embed = discord.Embed(title="Server info", color=0xdfa3ff)
+            embed.set_author(name=str(guild), icon_url=guild.icon_url)
+            embed.set_thumbnail(url=guild.icon_url)
+            embed.add_field(name='Właściciel: ', value=guild.owner, inline=False)
+            embed.add_field(name='Użytkowników: ', value=guild.member_count, inline=False)
+            embed.add_field(name='Stworzony: ', value=guild.created_at.strftime(date_format), inline=False)
+            embed.set_footer(text='(Server) ID: ' + str(guild.id))
+            await channel.send(embed=embed)
+        except Exception as e:
+            await cr_Exception(self.client, self.channel_id, str(e))
+
 
