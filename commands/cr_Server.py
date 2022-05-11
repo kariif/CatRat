@@ -72,7 +72,7 @@ class cr_Server(commands.Cog):
             str2 = '\n'.join(admins)
             str3 = '\n'.join(mods)
             embed_title = f'**Administracja serwera {self.server_name}**'
-            embed_description = "Poniżej znajdziesz listę administratorów i moderatorów serwera."
+            embed_description = "Poniżej znajdziesz listę Właścicieli, Administratorów oraz Moderatorów serwera."
             field1_name = f'Właściciele:'
             field1_value = (
                 f'**{str1}**'
