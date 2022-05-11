@@ -16,9 +16,3 @@ def GetReddit(subreddit):
 def GetWallpaper():
     page = request.urlopen("https://source.unsplash.com/random/1920x1080")
     return(page.geturl())
-
-def GetPapiez():
-    page = request.urlopen(f'https://api.mopsior.pl/api/papiez')
-    for entry in page:
-        meme = json.loads(entry.decode("utf-8"))
-    return meme["link"]

@@ -124,19 +124,6 @@ async def meme(ctx):
         await cr_Exception(client, err_channel, str(e))
 
 @client.command()
-async def papameme(ctx):
-    channel = client.get_channel(cfg_channel)
-    try:
-        meme = GetPapiez()
-        channel = client.get_channel(cfg_channel)
-        embed_title = f'**Papa Meme from API by Mopsior**'
-        embedVar = discord.Embed(title=embed_title, color=embed_color)
-        embedVar.set_image(url=meme)
-        await channel.send(embed=embedVar)
-    except Exception as e:
-        await cr_Exception(client, err_channel, str(e))
-
-@client.command()
 async def unixporn(ctx):
     channel = client.get_channel(cfg_channel)
     try:
