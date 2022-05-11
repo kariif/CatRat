@@ -2,7 +2,7 @@
 Bot Discord dla bonzi.club
 
 ## O "CatRacie"
-Bot obecnie jest w fazie wczesnej bety i jest zaledwie kilka komend, lecz z czasem zaczną pojawiać się fajne rzeczy. Bot cały czas jest w rozbudowie.
+Bot obecnie jest w fazie wczesnej bety i jest zaledwie kilka komend, lecz z czasem zaczną pojawiać się fajne rzeczy. 
 
 ## Inicjacja
 1. Sklonuj repozytorium.
