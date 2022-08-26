@@ -23,7 +23,7 @@ embed_color = 0xeace37
 
 # discord part
 activity = discord.Game(name=f';pomoc | {server_name}')
-intents = discord.Intents.default()
+intents = discord.Intents.all()
 intents.members = True
 client = commands.Bot(command_prefix=";", activity=activity, status=discord.Status.idle, intents=intents)
 client.remove_command("help")
